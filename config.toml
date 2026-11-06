@@ -1,0 +1,233 @@
+# Job search configuration. Edit this file to match what you're looking for.
+
+# Company job boards to watch. The slug is the part of the board URL:
+#   greenhouse: job-boards.greenhouse.io/<slug>
+#   lever:      jobs.lever.co/<slug>
+#   ashby:      jobs.ashbyhq.com/<slug>
+#   workday:    <tenant>.<wdN>.myworkdayjobs.com/<site>  ->  slug "<tenant>/<wdN>/<site>"
+# Health tech / medical / biotech companies with public boards (verified 2026-10-06).
+boards = [
+    { source = "greenhouse", slug = "flatironhealth" },
+    { source = "greenhouse", slug = "freenome" },
+    { source = "greenhouse", slug = "zocdoc" },
+    { source = "greenhouse", slug = "oscar" },
+    { source = "greenhouse", slug = "omadahealth" },
+    { source = "greenhouse", slug = "natera" },
+    { source = "greenhouse", slug = "komodohealth" },
+    { source = "greenhouse", slug = "swordhealth" },
+    { source = "greenhouse", slug = "butterflynetwork" },
+    { source = "greenhouse", slug = "pathai" },
+    { source = "greenhouse", slug = "truveta" },
+    { source = "greenhouse", slug = "veracyte" },
+    { source = "greenhouse", slug = "calicolabs" },
+    { source = "greenhouse", slug = "talkspace" },
+    { source = "greenhouse", slug = "cloverhealth" },
+    { source = "greenhouse", slug = "onemedical" },
+    { source = "greenhouse", slug = "iterativehealth" },
+    { source = "lever", slug = "grailbio" },
+    { source = "lever", slug = "includedhealth" },
+    { source = "lever", slug = "ro" },
+    # Added 2026-10-29 (verified live): more health tech / biotech / health AI boards.
+    { source = "greenhouse", slug = "doximity" },
+    { source = "greenhouse", slug = "healthie" },
+    { source = "greenhouse", slug = "twistbioscience" },
+    { source = "greenhouse", slug = "arcinstitute" },
+    { source = "greenhouse", slug = "garnerhealth" },
+    { source = "greenhouse", slug = "coherehealth" },
+    { source = "greenhouse", slug = "mavenclinic" },
+    { source = "greenhouse", slug = "science37" },
+    { source = "greenhouse", slug = "elationhealth" },
+    { source = "greenhouse", slug = "recursionpharmaceuticals" },
+    { source = "greenhouse", slug = "ginkgobioworks" },
+    { source = "greenhouse", slug = "qventus" },
+    { source = "lever", slug = "veeva" },
+    { source = "lever", slug = "lyrahealth" },
+    { source = "lever", slug = "arcadia" },
+    { source = "ashby", slug = "unlearn" },
+    { source = "ashby", slug = "radai" },
+    { source = "ashby", slug = "owkin" },
+    { source = "ashby", slug = "virtahealth" },
+    { source = "ashby", slug = "akasa" },
+    { source = "ashby", slug = "insitro" },
+    { source = "ashby", slug = "benchling" },
+    { source = "ashby", slug = "abridge" },
+    { source = "ashby", slug = "ambiencehealthcare" },
+    { source = "ashby", slug = "commure" },
+    { source = "ashby", slug = "headway" },
+    { source = "ashby", slug = "hims-and-hers" },
+    { source = "ashby", slug = "billiontoone" },
+    { source = "ashby", slug = "talkiatry" },
+    { source = "ashby", slug = "notable" },
+    { source = "ashby", slug = "singular" },
+    # Added 2026-10-29 (verified live): more health tech / biotech boards. Most have no matching
+    # opening today, but they're free to check and openings change weekly.
+    { source = "ashby", slug = "eightsleep" },
+    { source = "greenhouse", slug = "carrotfertility" },
+    { source = "greenhouse", slug = "profluent" },
+    { source = "greenhouse", slug = "charliehealth" },
+    { source = "ashby", slug = "whoop" },
+    { source = "ashby", slug = "sondermind" },
+    { source = "ashby", slug = "equip" },
+    { source = "greenhouse", slug = "prenuvo" },
+    { source = "lever", slug = "aledade" },
+    { source = "greenhouse", slug = "outsetmedical" },
+    { source = "greenhouse", slug = "twochairs" },
+    { source = "ashby", slug = "rula" },
+    { source = "ashby", slug = "assorthealth" },
+    { source = "ashby", slug = "superpower" },
+    { source = "ashby", slug = "tennr" },
+    { source = "greenhouse", slug = "akidolabs" },
+    { source = "ashby", slug = "sesame" },
+    { source = "greenhouse", slug = "generatebiomedicines" },
+    { source = "ashby", slug = "chaidiscovery" },
+    { source = "lever", slug = "vida" },
+    { source = "greenhouse", slug = "altoslabs" },
+    { source = "greenhouse", slug = "newlimit" },
+    { source = "ashby", slug = "metriport" },
+    { source = "greenhouse", slug = "ophelia" },
+    { source = "greenhouse", slug = "ultimagenomics" },
+    { source = "greenhouse", slug = "elementbiosciences" },
+    { source = "lever", slug = "everlywell" },
+    { source = "greenhouse", slug = "bicyclehealth" },
+    { source = "ashby", slug = "nabla" },
+    { source = "ashby", slug = "capsule" },
+    { source = "greenhouse", slug = "inceptive" },
+    { source = "ashby", slug = "openevidence" },
+    { source = "lever", slug = "enveda" },
+    { source = "greenhouse", slug = "chanzuckerberginitiative" },
+    { source = "ashby", slug = "wheel" },
+    { source = "ashby", slug = "regard" },
+    { source = "lever", slug = "zushealth" },
+    { source = "lever", slug = "canvasmedical" },
+    { source = "ashby", slug = "infinitus" },
+    { source = "greenhouse", slug = "suki" },
+    { source = "ashby", slug = "pearlhealth" },
+    { source = "ashby", slug = "codametrix" },
+    { source = "ashby", slug = "anterior" },
+    { source = "lever", slug = "nomihealth" },
+    { source = "lever", slug = "clarifyhealth" },
+    { source = "greenhouse", slug = "healthjoy" },
+    { source = "greenhouse", slug = "collectivehealth" },
+    { source = "greenhouse", slug = "modernhealth" },
+    # Workday career sites of large pharma, medtech, diagnostics and health insurers. Slower to check
+    # (requests are paced), so fetch takes a few extra minutes.
+    { source = "workday", slug = "gilead/wd1/gileadcareers" },
+    { source = "workday", slug = "illumina/wd1/illumina-careers" },
+    { source = "workday", slug = "dexcom/wd1/Dexcom" },
+    { source = "workday", slug = "abbott/wd5/abbottcareers" },
+    { source = "workday", slug = "medtronic/wd1/MedtronicCareers" },
+    { source = "workday", slug = "thermofisher/wd5/ThermoFisherCareers" },
+    { source = "workday", slug = "labcorp/wd1/External" },
+    { source = "workday", slug = "roche/wd3/roche-ext" },
+    { source = "workday", slug = "amgen/wd1/Careers" },
+    { source = "workday", slug = "pfizer/wd1/PfizerCareers" },
+    { source = "workday", slug = "resmed/wd3/ResMed_External_Careers" },
+    { source = "workday", slug = "cvshealth/wd1/CVS_Health_Careers" },
+    { source = "workday", slug = "elevancehealth/wd1/ANT" },
+    { source = "workday", slug = "centene/wd5/Centene_External" },
+    { source = "workday", slug = "humana/wd5/Humana_External_Career_Site" },
+    # Added 2026-10-30: well-known health tech / health AI companies found under other board names.
+    { source = "ashby", slug = "hinge-health" },
+    { source = "ashby", slug = "sprinter-health" },
+    { source = "ashby", slug = "color-health" },
+    { source = "greenhouse", slug = "oura" },
+    { source = "ashby", slug = "nuna" },
+    { source = "greenhouse", slug = "amwell" },
+    { source = "ashby", slug = "grow-therapy" },
+    { source = "greenhouse", slug = "octave" },
+    { source = "ashby", slug = "healthgorilla" },
+    { source = "greenhouse", slug = "valohealth" },
+    { source = "greenhouse", slug = "xairatherapeutics" },
+    { source = "greenhouse", slug = "isomorphiclabs" },
+]
+
+[search]
+# A job is kept if its title contains ANY of these (case-insensitive).
+title_include = [
+    "data analyst", "data scientist", "data science", "analytics", "machine learning",
+    "ml engineer", "statistician", "biostatistic", "business intelligence", "quantitative analyst",
+    "research analyst", "product analyst", "insights analyst", "reporting analyst", "healthcare analyst",
+    "clinical data analyst", "clinical data scien", "clinical data manag", "health data", "bioinformatic",
+    "computational biolog", "decision scien", "statistical programmer", "applied scientist", "ai engineer",
+    "data associate",
+    # Data science titles specific to health care / life sciences
+    "epidemiolog", "outcomes research", "health economic", "real world", "real-world", "quantitative scientist",
+    "clinical informatic", "health informatic",
+]
+# ...and NONE of these.
+title_exclude = [
+    "senior", "sr.", "sr", "staff", "principal", "lead", "director", "manager",
+    "head of", "vp", "intern", "leader", "iii", "iv",
+]
+# Phrases that contain an excluded word but aren't about seniority; they're ignored
+# when checking title_exclude (e.g. "Lead Generation Analyst" is kept).
+title_exclude_exceptions = ["lead generation"]
+# Location must contain ANY of these. Leave empty to accept every location.
+locations = [
+    # Remote
+    "remote",
+    # San Francisco Bay Area
+    "san jose", "santa clara", "sunnyvale", "mountain view", "palo alto", "menlo park",
+    "redwood city", "san mateo", "foster city", "south san francisco", "san francisco",
+    "bay area", "fremont", "oakland", "emeryville", "berkeley", "hayward", "milpitas",
+    "cupertino", "los gatos", "san carlos", "brisbane", "burlingame", "pleasanton",
+    # Austin, TX
+    "austin",
+]
+# ...and NONE of these (drops remote roles based outside the US).
+location_exclude = [
+    "india", "united kingdom", "london", "spain", "barcelona", "germany", "berlin", "france", "paris",
+    "denmark", "copenhagen", "ireland", "netherlands", "portugal", "poland", "europe", "emea",
+    "canada", "toronto", "vancouver", "mexico", "brazil", "argentina", "colombia", "costa rica", "latam",
+    "australia", "singapore", "japan", "israel", "philippines", "apac",
+    "slovakia", "czech", "hungary", "romania", "bulgaria", "serbia", "croatia", "ukraine", "italy", "milan",
+    "sweden", "norway", "finland", "switzerland", "zurich", "belgium", "austria", "greece", "turkey",
+    "china", "shanghai", "beijing", "hong kong", "korea", "seoul", "taiwan", "vietnam", "malaysia",
+    "indonesia", "thailand", "new zealand", "south africa", "egypt", "dubai", "united arab emirates",
+    "saudi arabia", "chile", "peru", "uruguay",
+]
+
+# Free checks of the posting text before paying to score it.
+# Jobs whose required experience is above this many years are skipped. Separate requirement lines
+# all apply; alternatives on one line ("BS + 3 years or MS + 1 year") use the lowest number.
+max_years_required = 3
+# Skip jobs that require a PhD with no Master's/Bachelor's alternative.
+exclude_phd_required = true
+
+[profile]
+resume_path = "master_resume.md"              # content: source of truth for facts
+resume_tex_path = "ThiGiang_Resume_Master.tex"  # layout: used to build tailored PDFs
+facts_path = "verified_supplemental_facts.md"   # confirmed facts not yet on the resume
+# Free-text preferences the scorer should weigh (seniority, salary floor, visa, etc.).
+preferences = """
+- Target roles: data analyst, data scientist, or machine learning roles.
+- Top priority: data scientist roles (including applied/ML scientist, biostatistician, real-world-evidence
+  and outcomes research) at health tech / medical / biotech companies. Data analyst and ML engineer roles
+  at those companies are also wanted. Roles outside health care are a lower priority.
+- Seeking entry-level to early-career roles; MS in Statistics, May 2023.
+- Experience summary: about 1 year of research experience (Research Assistant, Aug 2024 - June 2025).
+  Projects and coursework show skills, not years of experience.
+- Based in San Jose, CA. Preferred locations: San Francisco Bay Area, Austin TX, or remote
+  (only remote roles open to someone living in California).
+"""
+
+# [applicant] details (name, email, phone, ...) live in personal.toml, which Git ignores.
+# See personal.example.toml.
+
+[scoring]
+prompt_path = "prompts/job_matching_master_prompt.md"
+model = "claude-opus-5-5"
+effort = "low"       # low | medium | high — low is plenty for fit scoring
+min_score = 70       # jobs at or above this show up in `list` by default
+
+[tailoring]
+prompt_path = "prompts/resume_tailoring_master_prompt.md"
+config_path = "prompts/resume_tailoring_config.md"
+audit_prompt_path = "prompts/resume_auditor_prompt.md"
+model = "claude-opus-5-5"
+audit_model = "claude-opus-5-5"
+effort = "medium"     # tailoring needs more care than scoring
+page_limit = 1
+max_revisions = 2     # extra rounds when edits fail checks or the resume runs over the page limit
+output_dir = "tailored"
+file_prefix = "ThiGiang_Resume"   # files are named <prefix>_<Industry>_<Company>_<Role>

@@ -1,0 +1,4 @@
+anthropic>=1.11,<2
+pydantic>=2
+certifi
+playwright>=1.50

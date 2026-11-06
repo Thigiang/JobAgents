@@ -1,0 +1,22 @@
+# Browser profiles: saved logins and cookies. Never commit.
+browser-profile*/
+
+# Personal data
+personal.toml
+jobs.db
+jobs.db-*
+tailored/
+*.pdf
+ThiGiang_Resume_Master.tex
+master_resume.md
+verified_supplemental_facts.md
+
+# Secrets
+.env
+*.key
+
+# Python / system
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,19 @@
+# Copy to personal.toml and fill in. personal.toml is kept out of Git.
+
+[applicant]
+# Used by `apply` to fill standard fields on application forms. Check these before your first use.
+first_name = "First"
+last_name = "Last"
+email = "you@example.com"
+phone = "(555) 555-5555"
+location = "City, ST"
+linkedin = "https://www.linkedin.com/in/your-name/"
+github = "https://github.com/your-name"
+website = "https://your-site.example"
+
+# Answers the tool shows you while you fill the rest of the form (it does not select them for you).
+[applicant.answers]
+"Authorized to work in the US" = "Yes"        # fill in, e.g. "Yes"
+"Need visa sponsorship now or in future" = "No"
+"Earliest start date" = "12/01/2026"
+"Willing to relocate" = "Yes"
